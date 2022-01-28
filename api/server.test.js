@@ -44,6 +44,9 @@ describe("Auth Tests", () => {
   })
 });
 
-// describe("Joke Tests", () => {
-
-// })
+describe("Joke Tests", async () => {
+  const res = await request(server)
+  .post('/api/auth/register')
+  .send({username: "Fillsad", password: "ashdfgasdojuhif"})
+  .get('/api/jokes')
+})
